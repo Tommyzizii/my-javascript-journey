@@ -6,7 +6,7 @@ const year = 2025;
 const tommy = "I'm " + firstName + ', a' + (year - birthYear) + " years old " + job + "!";
 console.log(tommy);
 
-//Template String
+// Template String
 const templateTommy = `I'm ${firstName} a ${year - birthYear} years old ${job} !`;
 console.log(templateTommy);
 
