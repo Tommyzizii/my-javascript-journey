@@ -67,7 +67,6 @@ This repo documents my progress, challenges, and mini projects as I grow from a 
 ---
 
 ## 🛣️ Course Pathway
-Design a unique learning path aligned with your goals:
 - Frontend mastery → React, TypeScript, Next.js  
 - Backend foundations → Node.js, Express  
 - Full-stack exploration → Combine both worlds  
