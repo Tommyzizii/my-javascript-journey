@@ -13,3 +13,16 @@ if (age < legalAge){
     console.log(`Illegal To Drive!`);
 }
 
+// Century Calculate
+
+const birthYear = 2004;
+let century;
+
+if (birthYear <= 2000){
+    century = 20;
+    console.log(`Your are born in ${century}th century.`);
+}else{
+    century = 21;
+    console.log(`Your are born in ${century}st century.`);
+}
+
