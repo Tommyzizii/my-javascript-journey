@@ -18,4 +18,6 @@ function factorial(n){
     return result;
 }
 
+const fact5 = factorial(5);
+console.log(fact5);
 console.log(factorial(10));
