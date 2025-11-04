@@ -22,4 +22,3 @@ const gradeCalculator = grade => {
 
 const grade = Number(prompt("What is your grade: "));
 console.log(`Your Grade: ${gradeCalculator(grade)}`);
-
