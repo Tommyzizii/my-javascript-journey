@@ -17,6 +17,14 @@ let score = 20;
 let highscore = 0;
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 
+const displayMessage = function(message){
+  document.querySelector('.message').textContent = message;
+}
+
+const displayScore = function(score){
+  document.querySelector('.score').textContent = score;
+}
+
 document.querySelector('.check').addEventListener('click', function () {
   let guess = Number(document.querySelector('.guess').value);
 
@@ -24,12 +32,12 @@ document.querySelector('.check').addEventListener('click', function () {
 
   // When there is no input
   if (!guess) {
-    document.querySelector('.message').textContent = 'Not a number!🤚🏻';
+    displayMessage('Not a number!🤚🏻');
 
     // player wins
   } else if (guess === secretNumber) {
     document.querySelector('.number').textContent = secretNumber;
-    document.querySelector('.message').textContent = '🎉 Correct Number';
+    displayMessage('🎉 Correct Number');
     document.querySelector('body').style.backgroundColor = '#60b347';
     document.querySelector('.number').style.width = '30rem';
 
@@ -38,22 +46,11 @@ document.querySelector('.check').addEventListener('click', function () {
       document.querySelector('.highscore').textContent = highscore;
     }
 
-    //guess is too high
-  } else if (guess > secretNumber) {
+  } else if(guess != secretNumber) {
     if (score > 1) {
-      document.querySelector('.message').textContent = '📈 Too High!';
+      displayMessage(guess > secretNumber ? '📈 Too High!' : '📉 Too low!');
       score -= 1;
-      document.querySelector('.score').textContent = score;
-    } else {
-      document.querySelector('.score').textContent = 'You lost the gaeme! 💥';
-    }
-
-    //guess is too low
-  } else if (guess < secretNumber) {
-    if (score > 1) {
-      document.querySelector('.message').textContent = '📉 Too low!';
-      score -= 1;
-      document.querySelector('.score').textContent = score;
+      displayScore(score);
     } else {
       document.querySelector('.score').textContent = 'You lost the gaeme! 💥';
     }
@@ -64,8 +61,8 @@ document.querySelector('.again').addEventListener('click', function () {
   score = 20;
   secretNumber = Math.trunc(Math.random() * 20) + 1;
 
-  document.querySelector('.message').textContent = 'Start guessing...';
-  document.querySelector('.score').textContent = score;
+  displayMessage('Start guessing...');
+  displayScore(score);
   document.querySelector('.number').textContent = '?';
   document.querySelector('.guess').value = '';
 
