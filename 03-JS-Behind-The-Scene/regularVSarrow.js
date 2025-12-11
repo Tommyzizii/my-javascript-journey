@@ -1,7 +1,7 @@
 "use strict";
 
 var firstName = "tommyzizii"; // becomes global variable
-
+ 
 const tommy = {
   firstName: "Tommy",
   year: 2004,
@@ -13,7 +13,7 @@ const tommy = {
     // const self = this;
     // const isMillenial = function () {
     //   console.log(self);
-    //   if (self.year >= 1981 && self.year <= 1996) {
+    //   if (sel  f.year >= 1981 && self.year <= 1996) {
     //     console.log("You are Millenial");
     //   } else {
     //     console.log('You are GenZ');
